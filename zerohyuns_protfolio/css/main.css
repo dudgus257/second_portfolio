@@ -1,0 +1,58 @@
+/* HEADER */
+header {
+    position: fixed;
+    width: 100%;
+    top: 5rem;
+}
+header,
+.header__inner {
+    transition: .7s
+}
+header.active {
+    top: 0;
+}
+header.active .header__inner {
+    width: 100%;
+    padding: 0 10px;
+    border-radius: 0;
+}
+.header__inner {
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 25px;
+    background-color:#2b2b2b;
+    padding: 10px 20px;
+    margin: 0 auto;
+}
+.header__inner .logo > a {
+    background: url(../favicon.png) center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: calc(150px / 2);
+    height: calc(150px / 2);
+    display: block;
+}
+nav.gnb ul {
+    display: flex;
+    gap: 30px;
+}
+nav.gnb ul > li > a {
+    font-family: var(--nun-font);
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+/* MAIN */
+main {
+    background-color:antiquewhite;
+    height: 500vh;
+}
+section.intro {
+    /* background: url(../images/intro.jpg) center center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    border: 1px solid red;
+    
+}

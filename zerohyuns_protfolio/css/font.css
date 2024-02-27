@@ -1,0 +1,17 @@
+/* Roboto-bold */
+@font-face {
+    src: url(../font/RobotoMono-Bold.ttf) format(truetype);
+    font-family: "roboto-bold"
+}
+
+/* Nunito */
+@font-face {
+    src: url(../font/Nunito-Medium.ttf) format(truetype);
+    font-family: "nunito";
+}
+
+/* Montserrat */
+@font-face {
+    src: url(../font/Montserrat-Regular.ttf) format(truetype);
+    font-family: "montserrat";
+}

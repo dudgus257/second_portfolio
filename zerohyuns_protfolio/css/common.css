@@ -1,0 +1,24 @@
+@charset "utf-8";
+@import "./font.css";
+
+:root {
+    --rob-font: "roboto-bold";
+    --nun-font: "nunito";
+    --mon-font: "montserrat";
+    --black-color: #2b2b2b;
+    --white-color: #fff;
+    --baige-color: #e3ae5c;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+.inner {
+    padding: 20px;
+}
+
+section.intro {
+    height: 100vh;
+}
