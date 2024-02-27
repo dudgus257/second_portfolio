@@ -87,21 +87,12 @@ body.darkMode main section.intro .introBg {
 }
 body.darkMode main section.intro .introBg.top {
     background-image: url(../images/bg_top.png);
-    width: 1280px;
-    height: 473px;
 }
 body.darkMode main section.intro .introBg.left {
     background-image: url(../images/bg_left.png);
-    width: 1280px;
-    height: 475px;
-    bottom: 388px;
 }
 body.darkMode main section.intro .introBg.right {
     background-image: url(../images/bg_right.png);
-    width: 1035px;
-    height: 422px;
-    bottom: 388px;
-    right: 145px;
 }
 body.darkModeOff main section.intro {
     background: url(../images/intro_bg08.jpg) center center / cover no-repeat;
