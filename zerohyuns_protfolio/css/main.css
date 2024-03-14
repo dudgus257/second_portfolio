@@ -2,50 +2,22 @@
 header {
     position: fixed;
     width: 100%;
-    top: 5rem;
-    z-index: 9;
-}
-header,
-.header__inner {
-    transition: .7s
-}
-header.active {
     top: 0;
+    z-index: 9;
+    background-color: transparent;
+    box-sizing: border-box;
 }
-header.active .header__inner {
-    width: 100%;
-    padding: 0 10px;
-    border-radius: 0;
-}
-body.darkMode .header__inner,
-body.darkModeOff .header__inner {
-    width: 1100px;
+header .inner {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    border-radius: 25px;
-    padding: 10px 20px;
-    margin: 0 auto;
+    justify-content: space-between;
+    padding: 20px 35px;
 }
-body.darkMode .header__inner {
-    background-color:var(--black-color);
-}
-body.darkModeOff .header__inner {
-    background-color:var(--white-color);
-}
-body.darkMode .header__inner .logo > a,
-body.darkModeOff .header__inner .logo > a {
-    width: calc(150px / 2);
-    height: calc(150px / 2);
-    display: block;
-}
-
-body.darkMode .header__inner .logo > a {
-    background: url(../favicon.png) center center / contain no-repeat;
-}
-body.darkModeOff .header__inner .logo > a {
-    background: url(../favicon.png) center center / contain no-repeat;
-    filter: invert(100%);
+header .logo {
+    background: url(../favicon2.png) no-repeat center / contain;
+    width: calc(500px / 4);
+    height: calc(500px / 4);
+    filter: invert(1)
 }
 nav.gnb ul {
     display: flex;
@@ -55,66 +27,27 @@ nav.gnb ul > li > a {
     font-family: var(--nun-font);
     font-size: 20px;
     text-transform: uppercase;
+    transition: .4s;
+}
+nav.gnb li a::after {
+    content: '';
+    display: block;
+    border-bottom: 3px solid #fff;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+    transform-origin: 0% 50%;
+    margin-top: 5px;
+}
+nav.gnb li a:hover::after,
+nav.gnb li a:focus::after {
+    transform: scaleX(1);
 }
 
 /* MAIN */
-body.darkMode main {
-    background-color:white;
-    height: 500vh;
-}
-body.darkModeOff main {
+main {
     background-color: var(--black-color);
     height: 500vh;
 }
-body.darkMode main section.intro,
-body.darkModeOff main section.intro {
-    position: relative
+main section.intro {
+    background: url(../images/img05.png) no-repeat center / cover;
 }
-/* body.darkMode main section.intro {
-    background: url(../images/intro_bg07.jpg) center center / cover no-repeat;
-} */
-body.darkMode main section.intro {
-    border: 1px solid red;
-}
-body.darkMode main section.intro .introBg {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-body.darkMode main section.intro .introBg.top {
-    background-image: url(../images/bg_top.png);
-}
-body.darkMode main section.intro .introBg.left {
-    background-image: url(../images/bg_left.png);
-}
-body.darkMode main section.intro .introBg.right {
-    background-image: url(../images/bg_right.png);
-}
-body.darkModeOff main section.intro {
-    background: url(../images/intro_bg08.jpg) center center / cover no-repeat;
-}
-/* body.darkMode main section.intro::before {
-    content:'';
-    width: 100%;
-    height: 100%;    
-    background-color:#000;
-    position: absolute;
-    opacity: 0.3;
-} */
-body.darkModeOff main section.intro::before {
-    opacity: 0;
-}
-/* section.intro .content {
-    color: var(--white-color);
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    max-width: 500px;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-} */
