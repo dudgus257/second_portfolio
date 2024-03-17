@@ -46,8 +46,22 @@ nav.gnb li a:focus::after {
 /* MAIN */
 main {
     background-color: var(--black-color);
-    height: 500vh;
 }
-main section.intro {
-    background: url(../images/img05.png) no-repeat center / cover;
+
+/* ABOUT */
+section#about {
+    border: 1px solid red;
+}
+
+/* SKILL */
+section#skill {
+    border: 1px solid blue;
+}
+/* PORTFOLIO */
+section#portfolio {
+    border: 1px solid green;
+}
+/* CONTACT */
+section#contact {
+    border: 1px solid orange;
 }
