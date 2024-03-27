@@ -17,7 +17,7 @@ header .logo {
     background: url(../favicon2.png) no-repeat center / contain;
     width: calc(500px / 4);
     height: calc(500px / 4);
-    filter: invert(1)
+    filter: drop-shadow(2px 4px 6px black)
 }
 nav.gnb ul {
     display: flex;
@@ -32,7 +32,7 @@ nav.gnb ul > li > a {
 nav.gnb li a::after {
     content: '';
     display: block;
-    border-bottom: 3px solid #fff;
+    border-bottom: 3px solid #23356f;
     transform: scaleX(0);
     transition: transform 250ms ease-in-out;
     transform-origin: 0% 50%;
@@ -45,7 +45,7 @@ nav.gnb li a:focus::after {
 
 /* MAIN */
 main {
-    background-color: var(--black-color);
+    background-color: #e5ebf1;
 }
 
 /* ABOUT */
