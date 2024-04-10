@@ -18,10 +18,25 @@ a {
     color: #23356f
 }
 
-.inner {
-    padding: 20px;
+.inner:not(.header__inner) {
+    padding: 7rem 2rem 0;
+    flex-direction: column;
+    gap: 20px
+}
+
+.inner.flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner h2 {
+    font-size: 28px;
+    
 }
 
 section {
-    height: 100vh;
+    min-height: 100vh;
 }
+
+

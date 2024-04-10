@@ -11,12 +11,12 @@ header .inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 35px;
+    padding: 0 35px;
 }
 header .logo {
     background: url(../favicon2.png) no-repeat center / contain;
-    width: calc(500px / 4);
-    height: calc(500px / 4);
+    width: calc(500px / 6);
+    height: calc(500px / 6);
     filter: drop-shadow(2px 4px 6px black)
 }
 nav.gnb ul {
@@ -58,9 +58,23 @@ section#skill {
     border: 1px solid blue;
 }
 /* PORTFOLIO */
-section#portfolio {
+#portfolio {
     border: 1px solid green;
 }
+#portfolio .inner {
+    align-items: baseline;
+}
+#portfolio .portfolioContWrap {
+    padding: 20px;
+    border: 1px solid red;
+}
+#portfolio .portfolioContWrap .TabCont {
+    display: none;
+}
+#portfolio .portfolioContWrap .TabCont.active {
+    display: block;
+}
+
 /* CONTACT */
 section#contact {
     border: 1px solid orange;
