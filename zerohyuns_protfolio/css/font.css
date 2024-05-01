@@ -15,3 +15,13 @@
     src: url(../font/Montserrat-Regular.ttf) format(truetype);
     font-family: "montserrat";
 }
+
+/* Comfortaa */
+@font-face {
+    src: url(../font/Comfortaa-Medium.ttf) format(truetype);
+    font-family: "comfortaa";
+}
+@font-face {
+    src: url(../font/Comfortaa-Bold.ttf) format(truetype);
+    font-family: "comfortaa-bold";
+}

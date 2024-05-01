@@ -1,8 +1,11 @@
+@charset "utf-8";
+
 /* HEADER */
 header {
     position: fixed;
     width: 100%;
     top: 0;
+    left: 0;
     z-index: 9;
     background-color: transparent;
     box-sizing: border-box;
@@ -11,7 +14,7 @@ header .inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 35px;
+    padding: 0 3rem;
 }
 header .logo {
     background: url(../favicon2.png) no-repeat center / contain;
@@ -24,6 +27,7 @@ nav.gnb ul {
     gap: 30px;
 }
 nav.gnb ul > li > a {
+    display: block;
     font-family: var(--nun-font);
     font-size: 20px;
     text-transform: uppercase;
@@ -65,11 +69,20 @@ section#skill {
     align-items: baseline;
 }
 #portfolio .portfolioContWrap {
-    padding: 20px;
+    width: 100%;
     border: 1px solid red;
+}
+#portfolio .portfolioContWrap .portfolioTab {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 auto 30px;
+    gap: 20px;
 }
 #portfolio .portfolioContWrap .TabCont {
     display: none;
+    position: relative;
+    padding: 20px;
+    border: 1px solid red;
 }
 #portfolio .portfolioContWrap .TabCont.active {
     display: block;
