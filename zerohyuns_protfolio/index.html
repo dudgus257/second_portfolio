@@ -38,9 +38,9 @@
       <a class="logo" href="#intro"></a>
       <nav class="gnb" aria-label="메인메뉴">
         <ul>
-          <li>
+          <!-- <li>
             <a href="#intro">intro</a>
-          </li>
+          </li> -->
           <li>
             <a href="#about">about</a>
           </li>
@@ -55,6 +55,7 @@
           </li>
         </ul>
       </nav>
+      <button class="gnbBtn"></button>
     </div>
   </header>
 
@@ -67,7 +68,7 @@
     </section>
     <section id="about">
       <div class="inner">
-        <h2>ABOUT</h2>
+        <h2 class="fadeWrap">ABOUT</h2>
         <div class="aboutContWrap">
 
         </div>
@@ -75,12 +76,12 @@
     </section>
     <section id="skill">
       <div class="inner">
-        <h2>SKILL</h2>
+        <h2 class="fadeWrap">SKILL</h2>
       </div>
     </section>
     <section id="portfolio">
       <div class="inner flexCenter">
-        <h2>PORTFOLIO</h2>
+        <h2 class="fadeWrap">PORTFOLIO</h2>
         <div class="portfolioContWrap">
           <div class="portfolioTab">
             <button class="TabBtn" data-tab="tab1">Work</button>
@@ -90,14 +91,9 @@
           <div class="TabCont active" id="tab1">
             <div class="slidesWrap swiper mySwiper">
               <ul class="slides swiper-wrapper">
-                <li class="slide swiper-slide">키키키</li>
-                <li class="slide swiper-slide">하하하</li>
-                <li class="slide swiper-slide">키키키</li>
-                <li class="slide swiper-slide">하하하</li>
-                <li class="slide swiper-slide">키키키</li>
-                <li class="slide swiper-slide">하하하</li>
-                <li class="slide swiper-slide">키키키</li>
-                <li class="slide swiper-slide">하하하</li>
+                <li class="slide swiper-slide">slide1</li>
+                <li class="slide swiper-slide">slide2</li>
+                <li class="slide swiper-slide">slide3</li>
               </ul>
               <div class="swiper-button-prev"></div>
               <div class="swiper-button-next"></div>
@@ -105,22 +101,27 @@
             </div>
           </div>
           <div class="TabCont" id="tab2">
-            <div class="slidesWrap">
-              <ul class="slides">
-
-                <li class="slide">slide3</li>
-                <li class="slide">slide4</li>
-
+            <div class="slidesWrap swiper mySwiper">
+              <ul class="slides swiper-wrapper">
+                <li class="slide swiper-slide">slide4</li>
+                <li class="slide swiper-slide">slide5</li>
+                <li class="slide swiper-slide">slide6</li>
               </ul>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
           <div class="TabCont" id="tab3">
-            <div class="slidesWrap">
-              <ul class="slides">
-
-                <li class="slide">slide5</li>
-                <li class="slide">slide6</li>
+            <div class="slidesWrap swiper mySwiper">
+              <ul class="slides swiper-wrapper">
+                <li class="slide swiper-slide">slide6</li>
+                <li class="slide swiper-slide">slide7</li>
+                <li class="slide swiper-slide">slide8</li>
               </ul>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
         </div>
@@ -128,10 +129,13 @@
     </section>
     <section id="contact">
       <div class="inner">
-        <h2>CONTACT</h2>
+        <h2 class="fadeWrap">CONTACT</h2>
       </div>
     </section>
   </main>
+  <footer>
+    하단바
+  </footer>
 </body>
 
 </html>
