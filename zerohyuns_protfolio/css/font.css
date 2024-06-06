@@ -25,3 +25,15 @@
     src: url(../font/Comfortaa-Bold.ttf) format(truetype);
     font-family: "comfortaa-bold";
 }
+
+/* Jua */
+@font-face {
+    src: url(../font/Jua-Regular.ttf) format(truetype);
+    font-family: "jua";
+}
+
+/* Space Grotesk */
+@font-face {
+    src: url(../font/SpaceGrotesk-SemiBold.ttf) format(truetype);
+    font-family: "space";
+}

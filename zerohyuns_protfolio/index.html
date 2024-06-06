@@ -22,7 +22,7 @@
 <script defer src="js/main.js"></script>
 <script defer src="js/tab.js"></script>
 <script defer src="js/swiper.js"></script>
-<!-- <script defer src="js/slide.js"></script> -->
+<script defer src="js/text.js"></script>
 
 <!-- swiper CDN -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
@@ -35,23 +35,52 @@
   <!-- HEADER -->
   <header id="header" role="banner">
     <div class="header__inner inner">
-      <a class="logo" href="#intro"></a>
+      <a class="logo" href="#intro">
+        <button class="face-button">
+          <span class="face-container">
+            <span class="eye left"></span>
+            <span class="eye right"></span>
+            <span class="mouth"></span>
+          </span>
+        </button>
+      </a>
       <nav class="gnb" aria-label="메인메뉴">
         <ul>
-          <!-- <li>
-            <a href="#intro">intro</a>
-          </li> -->
           <li>
-            <a href="#about">about</a>
+            <a href="#about">
+              about
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
           </li>
           <li>
-            <a href="#skill">skill</a>
+            <a href="#skill">
+              skill
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
           </li>
           <li>
-            <a href="#portfolio">protfolio</a>
+            <a href="#portfolio">
+              protfolio
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
           </li>
           <li>
-            <a href="#contact">contact</a>
+            <a href="#contact">
+              contact
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
           </li>
         </ul>
       </nav>
@@ -63,7 +92,12 @@
   <main id="main" rold="main">
     <section id="intro">
       <div class="inner">
-
+        <div id="textWrapBox">
+          <div id="textWrap"></div>
+          <div id="underTextWrap">
+            <p>김영현의 포트폴리오입니다.</p>
+          </div>
+        </div>
       </div>
     </section>
     <section id="about">
@@ -134,7 +168,7 @@
     </section>
   </main>
   <footer>
-    하단바
+    상업적으로 이용하지 않았습니다.
   </footer>
 </body>
 

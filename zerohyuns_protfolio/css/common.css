@@ -30,7 +30,7 @@ a {
     gap: 20px
 }
 
-.inner.flexCenter {
+.flexCenter {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,6 +46,10 @@ a {
 
 section {
     min-height: 100vh;
+}
+
+.inner > h2 {
+    /* color:#fff; */
 }
 
 button {

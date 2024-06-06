@@ -12,32 +12,108 @@ header {
 }
 header .inner {
     position: relative;
-    background-color:#fff;
-    box-shadow: 0 5px 5px #999;
+    /* background-color:#fff;
+    box-shadow: 0 5px 5px #999; */
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 3rem;
 }
+/* 로고 */
 header .logo {
-    background: url(../favicon2.png) no-repeat center / contain;
+    /* background: url(../favicon2.png) no-repeat center / contain; */
     width: calc(500px / 7);
     height: calc(500px / 7);
-    filter: drop-shadow(2px 4px 6px black)
+    filter: drop-shadow(2px 4px 6px black);
+    border: 1px solid red;
 }
 nav.gnb ul {
     display: flex;
-    gap: 30px;
+    gap: 15px;
 }
 nav.gnb ul > li > a {
-    display: block;
-    font-family: var(--nun-font);
-    margin-top: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "space";
+    padding: 10px 15px;
     font-size: 20px;
     text-transform: uppercase;
+    background-color: #000;
+    border-radius: 10px;
+    color: #fff;
     transition: .4s;
 }
-nav.gnb li a::after {
+nav.gnb ul > li > a span {
+    position: absolute;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    opacity: 0;
+    transition: 0.1s;
+}
+nav.gnb ul > li > a:hover span {
+    opacity: 1;
+}
+nav.gnb ul > li > a span:nth-of-type(1) {
+    top: 0;
+    left: 0;
+    right: 100%;
+}
+nav.gnb ul > li > a span:nth-of-type(2) {
+    top: 0;
+    right: 0;
+    bottom: 100%;
+}
+nav.gnb ul > li > a span:nth-of-type(3) {
+    bottom: 0;
+    left: 100%;
+    right: 0;
+}
+nav.gnb ul > li > a span:nth-of-type(4) {
+    top: 100%;
+    left: 0;
+    bottom: 0;
+}
+nav.gnb ul > li > a:hover span:nth-of-type(1) {
+    right: 0%;
+}
+nav.gnb ul > li > a:hover span:nth-of-type(2) {
+    bottom: 0%;
+}
+nav.gnb ul > li > a:hover span:nth-of-type(3) {
+    left: 0%;
+}
+nav.gnb ul > li > a:hover span:nth-of-type(4) {
+    top: 0%;
+}
+nav.gnb ul > li > a span:nth-of-type(1) {
+    transition-delay: 0.3s
+}
+nav.gnb ul > li > a:hover span:nth-of-type(1) {
+    transition-delay: 0s;
+}
+
+nav.gnb ul > li > a span:nth-of-type(2) {
+    transition-delay: 0.2s;
+}
+nav.gnb ul > li > a:hover span:nth-of-type(2) {
+    transition-delay: 0.1s;
+}
+nav.gnb ul > li > a span:nth-of-type(3) {
+    transition-delay: 0.1s;
+}
+nav.gnb ul > li > a:hover span:nth-of-type(3) {
+    transition-delay: 0.2s;
+}
+nav.gnb ul > li > a span:nth-of-type(4) {
+    transition-delay: 0s;
+}
+nav.gnb ul > li > a:hover span:nth-of-type(4) {
+    transition-delay: 0.3s;
+}
+
+/* nav.gnb li a::after {
     content: '';
     display: block;
     border-bottom: 3px solid #23356f;
@@ -49,7 +125,7 @@ nav.gnb li a::after {
 nav.gnb li a:hover::after,
 nav.gnb li a:focus::after {
     transform: scaleX(1);
-}
+} */
 nav.gnb {
     position: relative;
     left: 100%;
@@ -74,10 +150,51 @@ nav.gnb.on {
 /* MAIN */
 main {
     background-color: #e5ebf1;
+    /* background-color:#222; */
     /* height: auto;
     min-height: 100%;
     padding-bottom: 70px; */
 }
+
+/* INTRO */
+section#intro {
+    /* background: linear-gradient(90deg, rgba(0,0,0,1) 76%, rgba(255,255,255,1) 100%); */
+    background-color: #000;
+}
+/* section#intro::before {
+    content:''; 
+    border:1px solid red; 
+    width: 100%; 
+    height: 100%; 
+    display: block; 
+    position: absolute
+} */
+
+/* INTRO TEXT ANIMATION */
+#intro #textWrapBox {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-50%);
+    top: 50%;
+    gap: 20px;
+}
+#textWrap > span,
+#underTextWrap > p {
+    font-family: "jua";
+    color: #fff;
+}
+#textWrap > span {
+    opacity: 0;
+    font-size: 4.5rem;
+}
+#underTextWrap > p {
+    font-size: 5rem;
+}
+.text-animated {
+    animation: slideInLeft 1s ease-in-out forwards 0s;
+}
+
 
 /* ABOUT */
 section#about {
@@ -121,12 +238,13 @@ section#contact {
 }
 
 /* Footer */
-/* footer {
-    height: 70px;
-    position: relative;
-    transform: translateY(-100%);
-} */
-
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    
+}
 /* fadeWrap */
 .fadeWrap {
     opacity: 0;
@@ -137,4 +255,15 @@ section#contact {
 .fadeWrap.fade-in {
     opacity: 1;
     left: 20px;
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
 }
