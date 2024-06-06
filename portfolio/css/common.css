@@ -1,0 +1,65 @@
+@charset "utf-8";
+@import "./font.css";
+@import "./button.css";
+@import "./slide.css";
+@import "./logo.css";
+
+:root {
+    --rob-font: "roboto-bold";
+    --nun-font: "nunito";
+    --mon-font: "montserrat";
+    --black-color: #2b2b2b;
+    --white-color: #fff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body, main {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #23356f
+}
+
+.inner:not(.header__inner) {
+    padding: 5.5rem 2rem 0;
+    flex-direction: column;
+    gap: 20px
+}
+
+.flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner h2 {
+    font-size: 28px;
+    border: 1px solid red;
+    display: inline-flex;
+    padding: 0 20px;
+    align-items: center;
+}
+
+section {
+    min-height: 100vh;
+}
+
+.inner > h2 {
+    /* color:#fff; */
+}
+
+button {
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+@keyframes gnbLeft {
+    100% { position: relative; left: 0; }
+}
+
+
