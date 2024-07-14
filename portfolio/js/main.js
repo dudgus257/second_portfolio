@@ -25,4 +25,9 @@ targetElements.forEach((element) => {
     observer.observe(element);
 });
 
+// day night
+const nightEl = document.querySelector(".nightBtn");
 
+nightEl.addEventListener("click", function(){
+    
+});

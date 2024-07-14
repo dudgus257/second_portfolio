@@ -1,5 +1,5 @@
 const textWrap = document.getElementById('textWrap');
-const context = '내일이 없는 Wep Publisher';
+const context = 'Welcome to my Portfolio';
 const textArray = context.split('');
 const tagName = 'span';
 let interval;

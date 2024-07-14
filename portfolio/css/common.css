@@ -26,7 +26,8 @@ a {
 }
 
 .inner:not(.header__inner) {
-    padding: 5.5rem 2rem 0;
+    display: flex;
+    padding: 5.5rem 2rem 0 1.4rem;
     flex-direction: column;
     gap: 20px;
     min-height: inherit;
@@ -39,8 +40,7 @@ a {
 }
 
 .inner h2 {
-    font-size: 28px;
-    border: 1px solid red;
+    font-size: 3.5rem;
     display: inline-flex;
     padding: 0 20px;
     align-items: center;
@@ -51,7 +51,8 @@ section {
 }
 
 .inner > h2 {
-    /* color:#fff; */
+    color:#fff;
+    font-family: "jua";
 }
 
 button {

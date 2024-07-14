@@ -32,27 +32,29 @@ nav.gnb ul {
     gap: 15px;
 }
 nav.gnb ul > li > a {
-    position: relative;
+    /* position: relative; */
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "space";
+    font-family: "jua";
     padding: 10px 15px;
-    font-size: 20px;
+    font-size: 1.5rem;
     text-transform: uppercase;
-    background-color: #000;
-    border-radius: 10px;
-    color: #fff;
-    transition: .4s;
+    /* border-radius: 10px; */
+    color:#003a88;
+    /* transition: .4s; */
 }
-nav.gnb ul > li > a span {
+body.night nav.gnb ul > li > a {
+    color: #fff;
+}
+/* nav.gnb ul > li > a span {
     position: absolute;
     border: 3px solid #fff;
     border-radius: 10px;
     opacity: 0;
     transition: 0.1s;
-}
-nav.gnb ul > li > a:hover span {
+} */
+/* nav.gnb ul > li > a:hover span {
     opacity: 1;
 }
 nav.gnb ul > li > a span:nth-of-type(1) {
@@ -111,7 +113,7 @@ nav.gnb ul > li > a span:nth-of-type(4) {
 }
 nav.gnb ul > li > a:hover span:nth-of-type(4) {
     transition-delay: 0.3s;
-}
+} */
 
 /* nav.gnb li a::after {
     content: '';
@@ -161,6 +163,9 @@ main {
 section#intro {
     background-image: linear-gradient( to bottom, #fff 40%, #63b2da, #1D64C1)
 }
+body.night section#intro {
+    background-image: linear-gradient( to bottom, #003a88ff 40%, #63b2da, #1D64C1)
+}
 
 
 /* INTRO TEXT ANIMATION */
@@ -172,18 +177,20 @@ section#intro {
     top: 30%;
     gap: 20px;
 }
-#textWrap > span,
-#underTextWrap > p {
+#textWrap > span {
     font-family: "jua";
     color: #003a88;
 }
+body.night section#intro #textWrap > span {
+    color: #fff;
+}
 #textWrap > span {
     opacity: 0;
-    font-size: 2.5rem;
+    font-size: 4.5rem;
 }
-#underTextWrap > p {
+/* #underTextWrap > p {
     font-size: 3.5rem;
-}
+} */
 .text-animated {
     animation: slideInLeft 1s ease-in-out forwards 0s;
 }
@@ -204,12 +211,65 @@ section#intro {
     top: 50%;
     background: #BDDFF0
 }
+body.night #intro .waveWrap .wave {
+    background: #276caa
+}
 #intro .waveWrap .wave1 {left: -900px; animation: wave 5s infinite linear;}
 #intro .waveWrap .wave2 {left: -500px; animation: wave 6s infinite linear;}
-#intro .waveWrap .wave3 {left: -200px;animation: wave 7s infinite linear;}
+#intro .waveWrap .wave3 {left: -200px; animation: wave 7s infinite linear;}
+#intro .waveWrap .wave4 {left: 300px; animation: wave 8s infinite linear;}
 
 @Keyframes wave {
     100% {transform: rotate(360deg)}
+}
+
+.fa-sun {
+    font-size: 130px;
+    color: yellow;
+    animation: move 4s infinite linear;
+    position:absolute;
+    transform: translate(-50%, -50%);
+    top: 10%;
+    right: 15%;
+    opacity: 1;
+}
+.fa-moon {
+    font-size: 130px;
+    color: rgba(255, 255, 255, 0.8);
+    animation: move 4s infinite linear;
+    position:absolute;
+    transform: translate(-50%, -50%);
+    top: 10%;
+    right: 15%;
+    opacity: 0;
+}
+.blur {
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    opacity: 0;
+}
+body.night section#intro .fa-sun{
+    opacity: 0;
+}
+body.night section#intro .fa-moon,
+body.night section#intro .blur{
+    opacity: 1;
+}
+/* span.water {
+    background: url(../images/water.png) center / contain no-repeat;
+    width: calc(350px / 2);
+    height: calc(350px / 2);
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    opacity: .7;
+} */
+
+@keyframes move {
+    0%,100% {
+        transform: rotate(0deg)
+    }
+    50% {transform: rotate(-20deg)}
 }
 
 /* ABOUT */
@@ -227,6 +287,7 @@ section#skill {
 }
 #portfolio .inner {
     align-items: baseline;
+    justify-content: flex-start;
 }
 #portfolio .portfolioContWrap {
     width: 100%;
@@ -270,7 +331,7 @@ footer {
 }
 .fadeWrap.fade-in {
     opacity: 1;
-    left: 20px;
+    left: 0;
 }
 
 
