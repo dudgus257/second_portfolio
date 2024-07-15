@@ -26,8 +26,15 @@ targetElements.forEach((element) => {
 });
 
 // day night
-const nightEl = document.querySelector(".nightBtn");
+const nightDayBtnEl = document.querySelector('#night_day');
 
-nightEl.addEventListener("click", function(){
-    
-});
+nightDayBtnEl.addEventListener('click', function(){
+    const bodyEl = document.body;
+
+    if(bodyEl.classList.contains('night')){
+        bodyEl.classList.remove('night')
+    } else {
+        bodyEl.classList.add('night')
+    }
+})
+

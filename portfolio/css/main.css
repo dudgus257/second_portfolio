@@ -161,10 +161,10 @@ main {
 
 /* INTRO */
 section#intro {
-    background-image: linear-gradient( to bottom, #fff 40%, #63b2da, #1D64C1)
+    background-image: linear-gradient( to bottom, #fff 58%, #63b2da, #1D64C1);
 }
 body.night section#intro {
-    background-image: linear-gradient( to bottom, #003a88ff 40%, #63b2da, #1D64C1)
+    background-image: linear-gradient( to bottom, #003a88ff 58%, #63b2da, #1D64C1)
 }
 
 
@@ -200,7 +200,7 @@ body.night section#intro #textWrap > span {
     height: 130px;
     position: absolute;
     transform: translateY(-50%);
-    top: 50%;
+    top: 66%;
     overflow: hidden;
 }
 #intro .waveWrap .wave {
@@ -228,9 +228,8 @@ body.night #intro .waveWrap .wave {
     color: yellow;
     animation: move 4s infinite linear;
     position:absolute;
-    transform: translate(-50%, -50%);
-    top: 10%;
-    right: 15%;
+    top: 20%;
+    right: 10%;
     opacity: 1;
 }
 .fa-moon {
@@ -249,7 +248,10 @@ body.night #intro .waveWrap .wave {
     opacity: 0;
 }
 body.night section#intro .fa-sun{
-    opacity: 0;
+    /* opacity: 0; */
+    animation: dayMove 1s linear;
+    top: -20%;
+    right: 10%
 }
 body.night section#intro .fa-moon,
 body.night section#intro .blur{
@@ -267,9 +269,15 @@ body.night section#intro .blur{
 
 @keyframes move {
     0%,100% {
-        transform: rotate(0deg)
+        transform: translate(-50%, -50%) rotate(0deg)
     }
-    50% {transform: rotate(-20deg)}
+    50% {transform: translate(-50%, -50%) rotate(-20deg)}
+}
+
+@keyframes dayMove {
+    0% {transform: translate(-50%, -50%); top: 10%; right: 10%; }
+    50% {transform: translate(-50%, -50%);top: 0%; right: 10%;}
+    100% {transform: translate(-50%, -50%);top: -20%; right: 10%;}
 }
 
 /* ABOUT */
