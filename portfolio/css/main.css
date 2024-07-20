@@ -44,7 +44,7 @@ nav.gnb ul > li > a {
     color:#003a88;
     /* transition: .4s; */
 }
-body.night nav.gnb ul > li > a {
+nav.gnb ul > li > a {
     color: #fff;
 }
 /* nav.gnb ul > li > a span {
@@ -160,12 +160,10 @@ main {
 }
 
 /* INTRO */
-section#intro {
-    /* animation: backgroundMoveDay 3s linear forwards; */
+/* section#intro {
     background-image: linear-gradient( to bottom, #fff 58%, #63b2da, #63b2da);
-}
-body.night section#intro {
-    /* animation: backgroundMoveNight 3s linear forwards */
+} */
+section#intro {
     background-image: linear-gradient( to bottom, #003a88ff 58%, #63b2da, #63b2da);
 }
 
@@ -194,7 +192,7 @@ body.night section#intro {
     font-family: "jua";
     color: #003a88;
 }
-body.night section#intro #textWrap > span {
+section#intro #textWrap > span {
     color: #fff;
 }
 #textWrap > span {
@@ -316,20 +314,20 @@ body.night #intro .waveWrap .wave {
     right: 0;
     opacity: 0;
 } */
-body.night section#intro .fa-moon{
+section#intro .fa-moon{
     animation: dayMoveRevert 1s linear forwards ;
     top: 170px;
     right: 100px;
     opacity: 1;
 }
-body.night section#intro .fa-moon.blur {
+section#intro .fa-moon.blur {
     opacity: 0;
     top: 170px;
     right: 100px;
     animation: blur 1s infinite linear;
     animation-delay: 2s
 }
-body.night section#intro .fa-asterisk {
+section#intro .fa-asterisk {
     opacity: 0;
     animation: star 1.2s infinite;
 }

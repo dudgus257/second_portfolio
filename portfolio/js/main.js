@@ -1,3 +1,4 @@
+
 // gnb 숨기기
 const gnbEl = document.querySelector(".gnb");
 const gnbBtnEl = document.querySelector(".gnbBtn")

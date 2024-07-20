@@ -3,6 +3,7 @@
 @import "./button.css";
 @import "./slide.css";
 @import "./logo.css";
+@import "./wave.css";
 
 :root {
     --rob-font: "roboto-bold";
