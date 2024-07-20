@@ -156,17 +156,30 @@ main {
     /* height: auto;
     min-height: 100%;
     padding-bottom: 70px; */
-    background-image: linear-gradient( to top, #00122e, #002659, #003a88, #004eb9, #63b2da)
+    background-image: linear-gradient( to top, #00122e, #002659, #003a88, #004eb9, #63b2da, #fff)
 }
 
 /* INTRO */
 section#intro {
-    background-image: linear-gradient( to bottom, #fff 58%, #63b2da, #1D64C1);
+    /* animation: backgroundMoveDay 3s linear forwards; */
+    background-image: linear-gradient( to bottom, #fff 58%, #63b2da, #63b2da);
 }
 body.night section#intro {
-    background-image: linear-gradient( to bottom, #003a88ff 58%, #63b2da, #1D64C1)
+    /* animation: backgroundMoveNight 3s linear forwards */
+    background-image: linear-gradient( to bottom, #003a88ff 58%, #63b2da, #63b2da);
 }
 
+/* @keyframes backgroundMoveDay {
+    0% {opacity: 1; background-image: linear-gradient( to bottom, #003a88ff 58%, #63b2da, #1D64C1)}
+    50% {opacity: .7;}
+    100% {opacity: 1; background-image: linear-gradient( to bottom, #fff 58%, #63b2da, #1D64C1);}
+}
+
+@keyframes backgroundMoveNight {
+    0% {opacity: 1; background-image: linear-gradient( to bottom, #fff 58%, #63b2da, #1D64C1);}
+    50% {opacity: .7;}
+    100% {opacity: 1; background-image: linear-gradient( to bottom, #003a88ff 58%, #63b2da, #1D64C1);}
+} */
 
 /* INTRO TEXT ANIMATION */
 #intro #textWrapBox {
@@ -209,19 +222,31 @@ body.night section#intro #textWrap > span {
     height: 2000px;
     border-radius: 48%;
     top: 50%;
-    background: #BDDFF0
+    background: #bddef0;
+    /* transition: 3s; */
 }
 body.night #intro .waveWrap .wave {
-    background: #276caa
+    background: #286DAB;
+    /* transition: 3s; */
 }
 #intro .waveWrap .wave1 {left: -900px; animation: wave 5s infinite linear;}
 #intro .waveWrap .wave2 {left: -500px; animation: wave 6s infinite linear;}
 #intro .waveWrap .wave3 {left: -200px; animation: wave 7s infinite linear;}
 #intro .waveWrap .wave4 {left: 300px; animation: wave 8s infinite linear;}
 
-@Keyframes wave {
+@keyframes wave {
     100% {transform: rotate(360deg)}
 }
+/* @keyframes waveDay {
+    0% {opacity: 1; background: #286DAB}
+    50% {}
+    100% {opacity: 1; background: #bddef0}
+}
+@keyframes waveNight {
+    0% {opacity: 1; background: #bddef0}
+    50% {opacity: .5;}
+    100% {opacity: 1; background: #286DAB}
+} */
 
 .fa-sun {
     font-size: 130px;
@@ -235,50 +260,142 @@ body.night #intro .waveWrap .wave {
 .fa-moon {
     font-size: 130px;
     color: rgba(255, 255, 255, 0.8);
-    animation: move 4s infinite linear;
+    /* animation: move 4s infinite linear; */
     position:absolute;
     transform: translate(-50%, -50%);
-    top: 10%;
-    right: 15%;
+    top: -100px;
+    right: 100px;
+    opacity: 0;
+    animation: dayMove 1s linear forwards;
+}
+.fa-moon.blur {
+    top: -100px;
+    right: 100px;
     opacity: 0;
 }
-.blur {
-    filter: blur(10px);
-    -webkit-filter: blur(10px);
+.fa-asterisk {
     opacity: 0;
+    color: #fff;
+    position: absolute;
 }
-body.night section#intro .fa-sun{
+.fa-asterisk.star1 {
+    top: 100px;
+    right: 300px;
+    font-size: 12px;
+}
+.fa-asterisk.star2 {
+    top: 200px;
+    right: 400px;
+    font-size: 20px;
+}
+.fa-asterisk.star3 {
+    top: 150px;
+    right: 550px;
+    font-size: 12px;
+}
+.fa-asterisk.star5 {
+    top: 100px;
+    right: 700px;
+    font-size: 12px;
+}
+.fa-asterisk.star6 {
+    top: 150px;
+    left: 100px;
+    font-size: 20px;
+}
+
+.fa-asterisk.star8 {
+    top: 100px;
+    left: 300px;
+    font-size: 12px;
+}
+.fa-asterisk.star10 {
+    top: 60px;
+    left: 500px;
+    font-size: 20px;
+}
+@keyframes blur {
+    0% {opacity: 0; filter: blur(0);
+        -webkit-filter: blur(0);}
+    50% {opacity: 1; filter: blur(10px);
+        -webkit-filter: blur(10px);}
+    100% {opacity: 0; filter: blur(0);
+        -webkit-filter: blur(0);}
+}
+body.night section#intro .sun:not(.sun.blur){
     /* opacity: 0; */
-    animation: dayMove 1s linear;
-    top: -20%;
-    right: 10%
+    transform: translate(-50%, -50%);
+    animation: dayMove 1s linear forwards;
+    top: -100px;
+    right: 0;
+    opacity: 0;
 }
-body.night section#intro .fa-moon,
-body.night section#intro .blur{
+body.night section#intro .fa-moon{
+    animation: dayMoveRevert 1s linear forwards ;
+    top: 170px;
+    right: 100px;
     opacity: 1;
 }
-/* span.water {
-    background: url(../images/water.png) center / contain no-repeat;
-    width: calc(350px / 2);
-    height: calc(350px / 2);
-    position: absolute;
-    bottom: 0;
-    left: 50px;
-    opacity: .7;
-} */
-
-@keyframes move {
-    0%,100% {
-        transform: translate(-50%, -50%) rotate(0deg)
-    }
-    50% {transform: translate(-50%, -50%) rotate(-20deg)}
+body.night section#intro .fa-moon.blur {
+    opacity: 0;
+    top: 170px;
+    right: 100px;
+    animation: blur 1s infinite linear;
+    animation-delay: 2s
+}
+body.night section#intro .fa-asterisk {
+    opacity: 0;
+    animation: star 1.2s infinite;
+}
+.sun {
+    position:absolute;
+    top: 170px;
+    right: 0;
+    background: url(../images/sun.png) center center / contain no-repeat;
+    width: 200px;
+    height: 200px;
+    /* animation: move 4s infinite linear; */
+    opacity: 1;
+    animation: dayMoveRevert 1s linear forwards ;
+} 
+.sun.blur {
+    background: url(../images/sun_blur.png) center center / contain no-repeat;
+    transform: translate(-50%, -50%);
+    top: 170px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    animation: blur 1s infinite linear;
+    animation-delay: 2s;
+    opacity: 0;
+}
+body.night .sun.blur {
+    opacity: 0;
+    animation: none
 }
 
 @keyframes dayMove {
-    0% {transform: translate(-50%, -50%); top: 10%; right: 10%; }
-    50% {transform: translate(-50%, -50%);top: 0%; right: 10%;}
-    100% {transform: translate(-50%, -50%);top: -20%; right: 10%;}
+    0% { transform: translate(-50%, -50%); top: 170px; opacity: 1; }
+    50% {transform: translate(-50%, -50%); top: 0px; opacity: 0.5;}
+    100% {transform: translate(-50%, -50%); top: -100px; opacity: 0;}
 }
+@keyframes dayMoveRevert {
+    0% { transform: translate(-50%, -50%); top: -100px; opacity: 0; }
+    50% {transform: translate(-50%, -50%); top: 0px; opacity: .5;}
+    100% {transform: translate(-50%, -50%); top: 170px; opacity: 1;}
+}
+
+@keyframes nightMove {
+    0% { transform: translate(-50%, -50%) rotate(0deg); top: -100px; opacity: 0; }
+    50% {transform: translate(-50%, -50%) rotate(0deg); top: 0px; opacity: 0.5;}
+    100% {transform: translate(-50%, -50%) rotate(0deg); top: 170px; opacity: 1;}
+}
+@keyframes star {
+    0%,100% {opacity: 0; transform: scale(0);}
+    50% {opacity: 1; transform: scale(1)}
+}
+
+
 
 /* ABOUT */
 section#about {
