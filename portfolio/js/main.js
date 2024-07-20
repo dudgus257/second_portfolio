@@ -26,15 +26,15 @@ targetElements.forEach((element) => {
 });
 
 // day night
-const nightDayBtnEl = document.querySelector('#night_day');
+// const nightDayBtnEl = document.querySelector('#night_day');
 
-nightDayBtnEl.addEventListener('click', function(){
-    const bodyEl = document.body;
+// nightDayBtnEl.addEventListener('click', function(){
+//     const bodyEl = document.body;
 
-    if(bodyEl.classList.contains('night')){
-        bodyEl.classList.remove('night')
-    } else {
-        bodyEl.classList.add('night')
-    }
-})
+//     if(bodyEl.classList.contains('night')){
+//         bodyEl.classList.remove('night')
+//     } else {
+//         bodyEl.classList.add('night')
+//     }
+// })
 

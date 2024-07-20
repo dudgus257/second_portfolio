@@ -208,7 +208,7 @@ body.night section#intro #textWrap > span {
     animation: slideInLeft 1s ease-in-out forwards 0s;
 }
 /* intro waveWrap */
-#intro .waveWrap {
+/* #intro .waveWrap {
     width: 100%;
     height: 130px;
     position: absolute;
@@ -223,11 +223,9 @@ body.night section#intro #textWrap > span {
     border-radius: 48%;
     top: 50%;
     background: #bddef0;
-    /* transition: 3s; */
 }
 body.night #intro .waveWrap .wave {
     background: #286DAB;
-    /* transition: 3s; */
 }
 #intro .waveWrap .wave1 {left: -900px; animation: wave 5s infinite linear;}
 #intro .waveWrap .wave2 {left: -500px; animation: wave 6s infinite linear;}
@@ -236,19 +234,9 @@ body.night #intro .waveWrap .wave {
 
 @keyframes wave {
     100% {transform: rotate(360deg)}
-}
-/* @keyframes waveDay {
-    0% {opacity: 1; background: #286DAB}
-    50% {}
-    100% {opacity: 1; background: #bddef0}
-}
-@keyframes waveNight {
-    0% {opacity: 1; background: #bddef0}
-    50% {opacity: .5;}
-    100% {opacity: 1; background: #286DAB}
 } */
 
-.fa-sun {
+/* .fa-sun {
     font-size: 130px;
     color: yellow;
     animation: move 4s infinite linear;
@@ -256,11 +244,10 @@ body.night #intro .waveWrap .wave {
     top: 20%;
     right: 10%;
     opacity: 1;
-}
+} */
 .fa-moon {
     font-size: 130px;
     color: rgba(255, 255, 255, 0.8);
-    /* animation: move 4s infinite linear; */
     position:absolute;
     transform: translate(-50%, -50%);
     top: -100px;
@@ -284,7 +271,7 @@ body.night #intro .waveWrap .wave {
     font-size: 12px;
 }
 .fa-asterisk.star2 {
-    top: 200px;
+    top: 160px;
     right: 400px;
     font-size: 20px;
 }
@@ -322,14 +309,13 @@ body.night #intro .waveWrap .wave {
     100% {opacity: 0; filter: blur(0);
         -webkit-filter: blur(0);}
 }
-body.night section#intro .sun:not(.sun.blur){
-    /* opacity: 0; */
+/* body.night section#intro .sun:not(.sun.blur){
     transform: translate(-50%, -50%);
     animation: dayMove 1s linear forwards;
     top: -100px;
     right: 0;
     opacity: 0;
-}
+} */
 body.night section#intro .fa-moon{
     animation: dayMoveRevert 1s linear forwards ;
     top: 170px;
@@ -347,18 +333,17 @@ body.night section#intro .fa-asterisk {
     opacity: 0;
     animation: star 1.2s infinite;
 }
-.sun {
+/* .sun {
     position:absolute;
     top: 170px;
     right: 0;
     background: url(../images/sun.png) center center / contain no-repeat;
     width: 200px;
     height: 200px;
-    /* animation: move 4s infinite linear; */
     opacity: 1;
     animation: dayMoveRevert 1s linear forwards ;
-} 
-.sun.blur {
+}  */
+/* .sun.blur {
     background: url(../images/sun_blur.png) center center / contain no-repeat;
     transform: translate(-50%, -50%);
     top: 170px;
@@ -368,11 +353,11 @@ body.night section#intro .fa-asterisk {
     animation: blur 1s infinite linear;
     animation-delay: 2s;
     opacity: 0;
-}
-body.night .sun.blur {
+} */
+/* body.night .sun.blur {
     opacity: 0;
     animation: none
-}
+} */
 
 @keyframes dayMove {
     0% { transform: translate(-50%, -50%); top: 170px; opacity: 1; }

@@ -1,5 +1,5 @@
 const textWrap = document.getElementById('textWrap');
-const context = 'Welcome to my Portfolio';
+const context = "Welcome to younghyun's Portfolio";
 const textArray = context.split('');
 const tagName = 'span';
 let interval;
