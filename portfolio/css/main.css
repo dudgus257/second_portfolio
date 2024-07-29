@@ -6,6 +6,7 @@ header {
     width: 100%;
     top: 0;
     left: 0;
+    padding: 20px 0;
     z-index: 9;
     background-color: transparent;
     box-sizing: border-box;
@@ -21,11 +22,10 @@ header .inner {
 }
 /* 로고 */
 header .logo {
-    /* background: url(../favicon2.png) no-repeat center / contain; */
-    width: calc(500px / 7);
-    height: calc(500px / 7);
-    filter: drop-shadow(2px 4px 6px black);
-    border: 1px solid red;
+    font-size: 2.5rem;
+    color: #fff;
+    font-family: 'jua';
+    
 }
 nav.gnb ul {
     display: flex;
@@ -48,44 +48,81 @@ nav.gnb ul > li > a {
     color: #fff;
 }
 nav.gnb {
-    position: relative;
-    left: 100%;
+    position: absolute;
+    right: -700px;
     transition: .7s;
 }
 nav.gnb.on {
-    left: -30px;
+    right: 100px;
 }
 #header .gnbBtn {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    right: 10px;
-    border-radius: 10px;
-    gap: 8px;
+    position: relative;
+    width: 50px;
+    height: 40px;
     background-color: transparent;
     border: none;
-    cursor: pointer;
-    pointer-events: auto;
 }
 #header .gnbBtn.on {
-    /* border:1px solid green;
-    box-shadow: 0px 0px 0px transparent; */
+    
 }
-#header .gnbBtn > span.gnb {
-    width: 35px;
-    height: 4px;
-    border-radius: 20px;
-    opacity: 0.9;
-    background-color: #ddd;
-    transition: .3s;
+#header .gnbBtn > span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 4px;
 }
-/* #header .gnbBtn.on > span.gnb {
-    position:absolute;
+#header .gnbBtn,
+#header .gnbBtn > span {
+    display: inline-block;
+    transition: all .4s;
+    box-sizing: border-box
+}
+#header .gnbBtn > span.bar1 {
+    top: 0;
+    animation: barTop .7s forwards;
+}
+#header .gnbBtn > span.bar2 {
+    top: 17px;
+    transition: all .2s .2s;
+    opacity: 1;
+}
+#header .gnbBtn > span.bar3 {
+    bottom: 0;
+    animation: barBottom .7s forwards;
+}
+/* gnb버튼 애니메이션 */
+#header .gnbBtn.on > span.bar1 {
+    animation: barTopON .7s forwards;
+}
+#header .gnbBtn.on > span.bar2 {
+    opacity: 0;
+}
+#header .gnbBtn.on > span.bar3 {
+    animation: barBottomON .7s forwards;
+}
 
-} */
-/* #header .gnbBtn.on > span.gnb1 {
-    transform: rotate(-40deg);
-} */
+@keyframes barTop {
+    0% {transform: translateY(17px) rotate(45deg)}
+    50% {transform: translateY(17px) rotate(0);}
+    100% {transform: translateY(0) rotate(0);}
+}
+@keyframes barBottom {
+    0% {transform: translateY(-17px) rotate(-45deg)}
+    50% {transform: translateY(-17px) rotate(0);}
+    100% {transform: translateY(0) rotate(0);}
+}
+@keyframes barTopON {
+    0% {transform: translateY(0) rotate(0)}
+    50% {transform: translateY(17px) rotate(0)}
+    100% {transform: translateY(17px) rotate(45deg)}
+}
+@keyframes barBottomON {
+    0% {transform: translateY(0) rotate(0)}
+    50% {transform: translateY(-17px) rotate(0)}
+    100% {transform: translateY(-17px) rotate(-45deg)}
+}
 
 /* MAIN */
 main {
