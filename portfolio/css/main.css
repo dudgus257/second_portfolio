@@ -126,7 +126,7 @@ nav.gnb.on {
 
 /* MAIN */
 main {
-    background-image: linear-gradient( to top, #00122e, #002659, #003a88, #004eb9, #2389c0, #fff)
+    background-image: linear-gradient( to top, #00122e, #002659, #003a88, #004eb9, #2389c0, #2389c0)
 }
 section#intro {
     background-image: linear-gradient( to bottom, #003a88ff 58%, #63b2da, #63b2da);
@@ -263,9 +263,9 @@ section#intro .fa-asterisk {
 
 /* ABOUT */
 section#about {
-    border: 1px solid red;
+    
 }
-section#about .aboutBtn {
+section#about .cd-btn {
     position:absolute;
     transform: translate(-50%, -50%);
     top: 50%;
@@ -286,7 +286,7 @@ section#skill {
 }
 #portfolio .portfolioContWrap {
     width: 100%;
-    border: 1px solid red;
+    
 }
 #portfolio .portfolioContWrap .portfolioTab {
     display: flex;
@@ -298,7 +298,7 @@ section#skill {
     display: none;
     position: relative;
     padding: 20px;
-    border: 1px solid red;
+    
 }
 #portfolio .portfolioContWrap .TabCont.active {
     display: block;
