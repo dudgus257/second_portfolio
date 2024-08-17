@@ -1,12 +1,23 @@
-// window.addEventListener('scroll', function(){
-//     let transformX = -1/18 * this.window.scrollY + 1000 / 18
+const horizontalSections = gsap.utils.toArray('section.horizontal')
 
-//     if(transformX < -100){
-//         this.document.getElementById('scroll-box').style.transform = `translateX(-100vw)`
-//     }
-//     else if(transformX < 0){
-//         this.document.getElementById('scroll-box').style.transform = `translateX(${transformX}vw)`
-//     }
-// })
+horizontalSections.forEach(function (sec, i){
+    var thisPinWrap = sec.querySelector(".pin-wrap");
+    var thisAnimWrap = thisPinWrap.querySelector('.animation-wrap');
 
+    var getToValue = () => -(thisAnimWrap.scrollWidth - window.innerWidth);
 
+    gsap.fromTo(thisAnimWrap, {
+        x: () => thisAnimWrap.classList.contains('to-right') ? 0 : getToValue()
+    }, {
+        x: () => thisAnimWrap.classList.contains('to-right') ? getToValue() : 0,
+            ease: "none",
+            scrollTrigger: {
+                trigger: sec,
+                start: "top top",
+                end: () => "+=" + (thisAnimWrap.scrollWidth - window.innerWidth),
+                    pin: thisPinWrap,
+                    invalidateOnRefresh: true,
+                    scrub: true,
+            }
+    });
+});

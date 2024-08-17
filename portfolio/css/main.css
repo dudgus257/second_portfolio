@@ -657,6 +657,23 @@ section#skill {
 /* WORK */
 section#work {
   border: 1px solid yellow;
+  overflow-x: hidden;
+}
+section.horizontal .pin-wrap,
+section.horizontal .animation-wrap {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+}
+section.horizontal .animation-wrap > .item {
+  /* position:relative; */
+  flex: 0 0 500px;
+  background-color: red;
+}
+section.horizontal .animation-wrap.to-right {
+  counter-reset: item;
+  float: left;
 }
 
 /* PORTFOLIO */
