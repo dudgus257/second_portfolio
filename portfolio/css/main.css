@@ -358,7 +358,8 @@ section#intro .fa-asterisk {
   .cd-modal p {
     line-height: 1.6;
     margin: 2em auto;
-    max-width: 800px;
+    max-width: calc(100% - 100px);
+    text-align: justify;
   }
   .cd-modal .modal-close {
     /* 'X' icon */
@@ -729,7 +730,64 @@ footer {
     left: 0;
 }
 
-
+/* 이력서 */
+article.cd-modal h4 {
+  margin-bottom: 10px;
+}
+article.cd-modal .modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+article.cd-modal .antecedents {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: calc(100% - 100px);
+}
+article.cd-modal .antecedents > .list_one {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  /* border: 1px solid red; */
+}
+article.cd-modal .antecedents > .list_one > img {
+  width: 200px;
+  height: auto;
+  border: 5px solid #fff;
+}
+article.cd-modal .antecedents table {
+  width: 100%;
+}
+article.cd-modal table {
+  border-width: 2px;
+}
+article.cd-modal table,
+article.cd-modal th,
+article.cd-modal td {
+  border: 1px solid #fff;
+}
+article.cd-modal td,
+article.cd-modal th {
+  text-align: center;
+  vertical-align: middle;
+}
+article.cd-modal td.head {
+  width: 160px;
+}
+article.cd-modal table:not(.default) thead tr,
+article.cd-modal table:not(.default) tbody tr {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+}
+article.cd-modal table thead th {
+  display: table-cell;
+  height: 50px;
+}
+article.cd-modal table tbody td {
+  height: 50px;
+}
 
 
 @keyframes slideInLeft {
